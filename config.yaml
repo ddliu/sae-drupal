@@ -1,0 +1,2 @@
+#handle:
+# - rewrite: if(!is_file() && path ~ "^(.*)$") goto "/index.php?q=$1"
