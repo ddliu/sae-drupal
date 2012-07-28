@@ -766,7 +766,7 @@ function drupal_access_denied() {
  *     easy access the array keys are returned in lower case.
  *   - data: A string containing the response body that was received.
  */
-function drupal_http_request($url, array $options = array()) {
+function drupal_http_request1($url, array $options = array()) {
   $result = new stdClass();
 
   // Parse the URL and make sure we can handle the schema.
