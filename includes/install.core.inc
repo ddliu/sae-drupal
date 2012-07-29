@@ -1646,6 +1646,7 @@ function install_check_requirements($install_state) {
         'value'       => st('The %file file exists.', array('%file' => $file)),
       );
       // If settings.php is not writable, throw an error.
+      /*
       if (!$writable) {
         $requirements['settings file writable'] = array(
           'title'       => st('Settings file'),
@@ -1659,7 +1660,7 @@ function install_check_requirements($install_state) {
           'title'       => st('Settings file'),
           'value'       => st('The settings file is writable.'),
         );
-      }
+      }*/
       if (!empty($settings_file_ownership_error)) {
         $requirements['settings file ownership'] = array(
           'title'       => st('Settings file'),
@@ -1670,7 +1671,6 @@ function install_check_requirements($install_state) {
       }
     }
   }
-  return array();
   return $requirements;
 }
 

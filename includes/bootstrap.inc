@@ -1,5 +1,5 @@
 <?php
-
+require_once(dirname(__FILE__).'/../sae/sae.php');
 /**
  * @file
  * Functions that need to be loaded on every Drupal request.

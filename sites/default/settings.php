@@ -209,7 +209,7 @@ $databases = array(
 			'password' => SAE_MYSQL_PASS,
 			'host' => SAE_MYSQL_HOST_M,
 			'port' => SAE_MYSQL_PORT,
-			'prefix' => '',
+			'prefix' => 'drupal_',
 		),
 		'slave' => array(
 			array(
@@ -218,7 +218,7 @@ $databases = array(
 				'password' => SAE_MYSQL_PASS,
 				'host' => SAE_MYSQL_HOST_S,
 				'port' => SAE_MYSQL_PORT,
-				'prefix' => '',
+				'prefix' => 'drupal_',
 			),
 		),
 	),
@@ -532,3 +532,8 @@ $conf['404_fast_html'] = '<html xmlns="http://www.w3.org/1999/xhtml"><head><titl
  * Remove the leading hash signs to disable.
  */
 # $conf['allow_authorize_operations'] = FALSE;
+
+//configuration
+$conf['file_public_path'] = 'dpstor://drupal/public';
+$conf['file_temporary_path'] = 'dpstor://drupal/temp';
+$conf['file_private_path'] = 'dpstor://drupal/private';

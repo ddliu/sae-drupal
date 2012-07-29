@@ -1,0 +1,9 @@
+bootstrap.inc error_reporting include sae.php
+
+move_uploaded_file => copy
+
+gd => saegd
+
+wrapper
+
+drupal_http_request
