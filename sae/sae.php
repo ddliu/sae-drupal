@@ -780,7 +780,19 @@ abstract class DPSAE_StreamWrapper implements DPSAE_DrupalStreamWrapperInterface
         $pathinfo = parse_url($path);
         $domain = $pathinfo['host'];
         $file = ltrim(strstr($path, $pathinfo['path']), '/\\');
-        
+        $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+        //@todo getRealStorageUrl
+        if(in_array($ext, array('js', 'css', 'gz'))){
+			return $this->getRealStorageUrl();
+		}
+        return 'http://'.$_SERVER['HTTP_HOST'].'/?q=' . drupal_encode_path($path);
+  }
+  
+  public function getRealStorageUrl(){
+	  $path = $this->getLocalPath();
+        $pathinfo = parse_url($path);
+        $domain = $pathinfo['host'];
+        $file = ltrim(strstr($path, $pathinfo['path']), '/\\');
 	  return 'http://'.$_SERVER['HTTP_APPNAME'].'-'.$domain.'.stor.sinaapp.com/'.$file;
   }
 }
@@ -867,7 +879,9 @@ stream_wrapper_register( "dpstor", "DrupalStorageWrapper" );
 function image_saegd_copy_tmp($file){
 	$tmp = SAE_TMP_PATH.'/'.md5($file);
 	if(!file_exists($tmp)){
-		copy($file, $tmp);
+		if(!copy($file, $tmp)){
+			return false;
+		}
 	}
 	return $tmp;
 }
@@ -1112,7 +1126,9 @@ function image_saegd_load(stdClass $image) {
   $extension = str_replace('jpg', 'jpeg', $image->info['extension']);
   $function = 'imagecreatefrom' . $extension;
 
-  $tmp = image_saegd_copy_tmp($image->source);
+  if(!$tmp = image_saegd_copy_tmp($image->source)){
+	  return false;
+	}
   return (function_exists($function) && $image->resource = $function($tmp));
 }
 
@@ -1229,7 +1245,9 @@ function image_saegd_create_tmp(stdClass $image, $width, $height) {
  */
 function image_saegd_get_info(stdClass $image) {
   $details = FALSE;
-  $tmp = image_saegd_copy_tmp($image->source);
+  if(!$tmp = image_saegd_copy_tmp($image->source)){
+	  return false;
+  }
   $data = getimagesize($tmp);
 
   if (isset($data) && is_array($data)) {

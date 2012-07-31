@@ -537,3 +537,4 @@ $conf['404_fast_html'] = '<html xmlns="http://www.w3.org/1999/xhtml"><head><titl
 $conf['file_public_path'] = 'dpstor://drupal/public';
 $conf['file_temporary_path'] = 'dpstor://drupal/temp';
 $conf['file_private_path'] = 'dpstor://drupal/private';
+$conf['image_toolkit'] = 'saegd';
