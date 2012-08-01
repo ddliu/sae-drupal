@@ -1,0 +1,100 @@
+
+/* ---------- Preview Styles ----------- */
+
+#business { margin:0; padding:0; outline:0 none; vertical-align:baseline; background:#eeeeee; width:650px; }
+
+#inner {
+  width: 80%;
+  margin:0 auto;
+  background:#ffffff;
+  border-top: 3px solid #b81007;
+}
+
+#header {
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #EEE;
+    clear:both;
+}
+#sitename {
+    float: left;
+    padding: 20px 15px;
+}
+#sitename h2{
+    margin: 0;
+    line-height: 1.2em;
+    font-size: 22px;
+    font-weight: bold;
+}
+#sitename h2 a{
+    color: #222;
+    text-decoration: none;
+}
+
+#sitename {
+    font-weight: normal;
+    color: #666;
+    font-size: 12px;
+}
+#main-menu {
+    position: absolute;
+    height: 48px;
+    top: 0px;
+    right: 0px;
+    font-size: 1em;
+}
+#main-menu .menu ,
+#main-menu .menu  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#main-menu .menu { line-height: 1.0 }
+#main-menu .menu ul {
+    position: absolute;
+    top: -999em;
+    width: 10em; /* left offset of submenus need to match (see below) */
+}
+#main-menu .menu li {
+    float: left;
+    position: relative;
+}
+#main-menu .menu a {
+    display: block;
+    position: relative;
+}
+#main-menu .menu a {
+    color: #666;
+    padding: 1.5em 15px;
+    text-decoration: none;
+}
+
+
+#main-menu .menu a.active {
+    color: #FFF;
+    background: #b81007;
+}
+
+#main{
+ clear:both;
+ padding:10px;
+ border-top: 3px solid #eee;
+}
+
+.input-button{
+-moz-transition: all 0.2s ease-in-out 0s;
+cursor: pointer;
+background: none repeat scroll 0 0 #B81007;
+color: #fff;
+padding: 4px 6px;
+margin-right: 4px;
+margin-bottom: 5px;
+font-weight: bold;
+
+}
+
+
+#link a {
+    text-decoration: none;
+    color: #2E70B1;
+}

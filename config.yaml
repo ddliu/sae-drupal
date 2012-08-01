@@ -1,2 +1,2 @@
 handle:
- - rewrite: if(!is_file() && !is_dir() && path ~ "^(.*)$") goto "/index.php?q=$1"
+ - rewrite: if(!is_file() && !is_dir() && path ~ "^(.*)$") goto "/index.php?q=$1&%{QUERY_STRING}"

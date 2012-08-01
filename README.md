@@ -1,2 +1,46 @@
 # Drupal 7.14 for SAE
 
+## 特性
+
+ - 支持简洁URL(clean url)
+ - 支持文件上传
+ - 支持数据库主从分离
+ - 支持Memcache缓存
+ - <del>支持邮件发送</del>
+
+## 安装
+
+ - 在SAE后台初始化Mysql服务
+ - 在SAE后台Storage面板创建一个新域"drupal"
+ - 上传安装包
+ - 访问http://youapp.sinaapp.com/install.php进行安装(数据库不需要配置，可直接跳过)
+ 
+### 启用Memcache
+
+启用Memcache会让应用运行得更快，并且消耗更少的资源，启用方法：
+
+ - 在SAE后台启用Memcache服务
+ - 在Drupal后台开启Memcache模块
+ 
+## 附带的模块
+
+ - Memcache
+ - SMTP
+ 
+## 附带的风格
+
+ - bluemasters
+ - business
+ - corporateclean
+ - danland
+ - touch
+ 
+## 缺陷
+
+ - 由于SAE不能写本地IO，因此自动更新将会无效
+ - Email不支持普通的发送方式，导致发送无法成功
+ 
+## TODO
+
+ - 支持邮件发送(使用SaeMail)
+ - 进一步优化存储的性能
