@@ -781,10 +781,11 @@ abstract class DPSAE_StreamWrapper implements DPSAE_DrupalStreamWrapperInterface
         $domain = $pathinfo['host'];
         $file = ltrim(strstr($path, $pathinfo['path']), '/\\');
         $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-        //@todo getRealStorageUrl
-        if(in_array($ext, array('js', 'css', 'gz'))){
+        //@todo cache stat
+        if(in_array($ext, array('js', 'css', 'gz')) || file_exists($path)){
 			return $this->getRealStorageUrl();
 		}
+		
         return 'http://'.$_SERVER['HTTP_HOST'].'/?q=' . drupal_encode_path($path);
   }
   
@@ -1490,4 +1491,16 @@ function drupal_http_request($url, array $options = array()) {
   }
   $result->code = $curl_http_code;
   return $result;
+}
+
+function sae_dmemcache_object($bin = NULL, $flush = FALSE) {
+	static $mc;
+	if($flush && null !== $mc){
+		$mc->close();
+		unset($mc);
+	}
+	if(null === $mc){
+		$mc = memcache_init();
+	}
+	return $mc;
 }

@@ -538,3 +538,8 @@ $conf['file_public_path'] = 'dpstor://drupal/public';
 $conf['file_temporary_path'] = 'dpstor://drupal/temp';
 $conf['file_private_path'] = 'dpstor://drupal/private';
 $conf['image_toolkit'] = 'saegd';
+
+//memcache
+//$conf['cache_backends'][] = 'sites/all/modules/memcache/memcache.inc';
+//$conf['cache_default_class'] = 'MemCacheDrupal';
+//$conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
