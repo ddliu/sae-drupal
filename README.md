@@ -15,7 +15,7 @@ Drupal 7.14的SAE移植，基本功能可正常使用
  - 在SAE后台初始化Mysql服务
  - 在SAE后台Storage面板创建一个新域"drupal"
  - 上传安装包
- - 访问http://youapp.sinaapp.com/install.php进行安装(数据库不需要配置，可直接跳过)
+ - 访问`http://youapp.sinaapp.com/install.php`进行安装(数据库不需要配置，可直接跳过)
  
 ### 启用Memcache
 
@@ -24,6 +24,11 @@ Drupal 7.14的SAE移植，基本功能可正常使用
  - 在SAE后台启用Memcache服务
  - 在Drupal后台开启Memcache模块
  
+## 附带的语言包
+
+ - 简体中文
+ - 繁体中文
+
 ## 附带的模块
 
  - Memcache
