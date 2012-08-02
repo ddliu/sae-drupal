@@ -1,3 +1,42 @@
 [submodule "sae/pyark"]
 	path = sae/pyark
 	url = git@github.com:ddliu/pyark.git
+[submodule "sites/all/modules/bueditor"]
+	path = sites/all/modules/bueditor
+	url = http://git.drupal.org/project/bueditor.git
+[submodule "sites/all/modules/markdown"]
+	path = sites/all/modules/markdown
+	url = http://git.drupal.org/project/markdown.git
+[submodule "sites/all/modules/smtp"]
+	path = sites/all/modules/smtp
+	url = http://git.drupal.org/project/smtp.git
+[submodule "sites/all/modules/extra/translation_overview"]
+	path = sites/all/modules/extra/translation_overview
+	url = http://git.drupal.org/project/translation_overview.git
+[submodule "sites/all/modules/extra/variable"]
+	path = sites/all/modules/extra/variable
+	url = http://git.drupal.org/project/variable.git
+[submodule "sites/all/modules/extra/i18n"]
+	path = sites/all/modules/extra/i18n
+	url = http://git.drupal.org/project/i18n.git
+[submodule "sites/all/modules/extra/lang_dropdown"]
+	path = sites/all/modules/extra/lang_dropdown
+	url = http://git.drupal.org/project/lang_dropdown.git
+[submodule "sites/all/themes/bluemasters"]
+	path = sites/all/themes/bluemasters
+	url = http://git.drupal.org/project/bluemasters.git
+[submodule "sites/all/themes/business"]
+	path = sites/all/themes/business
+	url = http://git.drupal.org/project/business.git
+[submodule "sites/all/themes/corporateclean"]
+	path = sites/all/themes/corporateclean
+	url = http://git.drupal.org/project/corporateclean.git
+[submodule "sites/all/themes/danland"]
+	path = sites/all/themes/danland
+	url = http://git.drupal.org/project/danland.git
+[submodule "sites/all/themes/simpleclean"]
+	path = sites/all/themes/simpleclean
+	url = http://git.drupal.org/project/simpleclean.git
+[submodule "sites/all/themes/touch"]
+	path = sites/all/themes/touch
+	url = http://git.drupal.org/project/touch.git

@@ -31,16 +31,19 @@ Drupal 7.14的SAE移植，基本功能可正常使用
 
 ## 附带的模块
 
- - Memcache
- - SMTP
+ - [Memcache](http://drupal.org/project/memcache/) (支持Memcache, 针对SAE有修改)
+ - [SMTP](http://drupal.org/project/smtp/) (暂时无法使用)
+ - [BUEditor](http://drupal.org/project/bueditor/) (简单的编辑器)
+ - [Markdown](http://drupal.org/project/markdown/) (支持Markdown格式撰写内容)
  
 ## 附带的风格
 
- - bluemasters
- - business
- - corporateclean
- - danland
- - touch
+ - [bluemasters](http://drupal.org/project/bluemasters/)
+ - [business](http://drupal.org/project/business/)
+ - [corporateclean](http://drupal.org/project/corporateclean/)
+ - [danland](http://drupal.org/project/danland/)
+ - [touch](http://drupal.org/project/touch/)
+ - [simpleclean](http://drupal.org/project/simpleclean/)
  
 ## 缺陷
 
@@ -52,3 +55,8 @@ Drupal 7.14的SAE移植，基本功能可正常使用
 
  - 支持邮件发送(使用SaeMail)
  - 进一步优化存储的性能
+ 
+## 链接
+
+ - [项目主页](http://maxmars.net/p/sae-drupal)
+ - [Github](https://github.com/ddliu/sae-drupal)

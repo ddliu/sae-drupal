@@ -693,7 +693,7 @@ function drupal_environment_initialize() {
 
   // Enforce E_ALL, but allow users to set levels not part of E_ALL.
   //error_reporting(E_ALL | error_reporting());
-  error_reporting(E_ERROR);
+  error_reporting(0);
 
   // Override PHP settings required for Drupal to work properly.
   // sites/default/default.settings.php contains more runtime settings.
